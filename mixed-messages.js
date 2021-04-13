@@ -21,17 +21,31 @@ messages = ['You will know it when you see it. It will know you when it sees you
 
 
 //console.log(messages)
+let count= 0;
+const sum = ()=>{ 
+    count +=1
+}
 
- 
+yesButton.onclick = sum
+
 function fortuneMessage(event) {
     let fortune = messages[Math.floor(Math.random() * 15)] ;
-    event.target.innerHTML.h2 = fortune
-}          
+     if (count === 1){document.getElementById('message').innerHTML = fortune}
+    else if ( count === 2){
+    document.getElementById('message').innerHTML = 'You can have only one fortune a day!'
+    yesButton.removeEventListener('click', fortuneMessage)}
 
+}        
+
+//function oneFortune(event){
+    //document.getElementById('message').innerHTML = 'You can only have one fortune a day'
+    //yesButton.removeEventListener('click', oneFortune)
+//}
 
 function noFortune(event) {
-    event.target.innerHTML.h2 = 'See you next time!'
+    document.getElementById('message').innerHTML = 'See you next time!'
 }
 
 yesButton.addEventListener('click', fortuneMessage);
-noButton.addEventListener('click', noFortune)
+yesButton.addEventListener('click', oneFortune);
+noButton.addEventListener('click', noFortune);

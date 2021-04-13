@@ -15,7 +15,7 @@ button.yes{
     align-items: center;
     font-size: 36px;
     padding: 20px 50px;
-    margin-left: 350px;
+    margin-left: 550px;
     margin-right: 25px;
     background-color: papayawhip;
     border-color: blueviolet;
@@ -38,6 +38,8 @@ h2{
     font-weight: 400;
     text-align: center;
     color: blueviolet;
+    font-size: 45px;
+    padding: 10px;
 }
 
 @font-face {
